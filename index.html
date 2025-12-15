@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="arthematict.css">
+</head>
+<body>
+     <h1>Arthimatic operation</h1>
+     <div class="container">
+   
+   
+    <div class="input">
+    <input type="number" id="num1" placeholder="Enter A number">
+    <input type="number" id="num2" placeholder="Enter A number"></div>
+  <div class="button"> 
+    <button onClick="calculate('Add')">Add</button>
+    <button onClick="calculate('sub')">sub</button>
+    <button onClick="calculate('mul')">Multiple</button>
+    <button onClick="calculate('div')">Divid</button>
+</div> 
+    <p id="Result">Result:</p>
+    </div>
+    <script>
+        function calculate(type){
+            let a=Number(document.getElementById("num1").value)
+            let b=Number(document.getElementById("num2").value)
+            let ans=0;
+            if(type==='Add'){
+                ans=a+b
+            }
+             if(type==='sub'){
+                ans=a-b
+            }
+             if(type==='mul'){
+                ans=a*b
+            }
+             if(type==='div'){
+                ans=b!==0?a/b:"cannot divisable by 0"
+            }
+            let res=document.getElementById("Result").innerHTML="result:"+ans;
+
+        }
+    </script>
+
+</body>
+</html>
